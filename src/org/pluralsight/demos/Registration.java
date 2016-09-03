@@ -46,6 +46,8 @@ public class Registration extends HttpServlet {
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
+		PrintWriter out = response.getWriter();
+		out.println("<h4>Processing POST request.. </h4");
+		doGet(request, response);
 	}
-
 }
