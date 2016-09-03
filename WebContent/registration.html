@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Java EE: Programming Servlets</title>
+</head>
+<body>
+	<h3>Programming Servlets: Registration</h3><hr>
+	<form name="registration" method="get" action="/ServletApplicationsDemo/Registration">
+		<table>
+			<tr>
+				<td>Username : </td>
+				<td><input type="text" name="username"/></td>
+			</tr>
+			<tr>
+				<td>Password : </td>
+				<td><input type="password" name="password"/></td>
+			</tr>
+			<tr>
+				<td>Sex : </td>
+				<td>
+					<input type="radio" name="gender" value="male"/>Male &nbsp;
+					<input type="radio" name="gender" value="female"/>Female
+				</td>
+			</tr>
+			<tr>
+				<td>Hobbies : </td>
+				<td>
+					<input type="checkbox" name="hobbies" value="movies"/>Movies &nbsp;
+					<input type="checkbox" name="hobbies" value="music"/>Music &nbsp;
+					<input type="checkbox" name="hobbies" value="sports"/>Sports
+				</td>
+			</tr>
+			<tr>
+				<td>Country : </td>
+				<td>
+					<select name="country">
+						<option value="India">India</option>
+						<option value="USA">USA</option>
+						<option value="UK">UK</option>
+						<option value="China">China</option>
+						<option value="Australia">Australia</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>Languages Known : </td>
+				<td>
+					<select name="languages" multiple="multiple">
+						<option value="English">English</option>
+						<option value="Russian">Russian</option>
+						<option value="Spanish">Spanish</option>
+						<option value="German">German</option>
+						<option value="Mandarin">Mandarin</option>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td>
+					<input type="submit" value="Register" name="btnRegister"/> &nbsp;
+					<input type="reset" value="Reset" name="btnReset"/>
+				</td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
