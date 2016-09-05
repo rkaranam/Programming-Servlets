@@ -31,15 +31,15 @@ public class Registration extends HttpServlet {
 		out.println("<p>Username : " + username + "</p>");
 		out.println("<p>Password : " + password + "</p>");
 		out.println("<p>Gender : " + gender + "</p>");
-		out.println("<p>Hobbies : </p>");
-		for (int i = 0; i < hobbies.length; i++) {
+		out.println("<p>Hobbies : " + String.join(",", hobbies) + "</p>");
+		/*for (int i = 0; i < hobbies.length; i++) {
 			out.println(hobbies[i] + "<br>");
-		}
+		}*/
 		out.println("<p>Country : " + country + "</p>");
-		out.println("<p>Languages Known : </p>");
-		for (int i = 0; i < languages.length; i++) {
+		out.println("<p>Languages Known : " + String.join(", ", languages) + "</p>");
+		/*for (int i = 0; i < languages.length; i++) {
 			out.println(languages[i] + "<br>");
-		}
+		}*/
 		out.println("</div>");
 		
 	}
