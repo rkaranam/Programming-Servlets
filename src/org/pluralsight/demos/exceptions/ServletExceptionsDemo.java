@@ -14,7 +14,7 @@ public class ServletExceptionsDemo extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
 			throws ServletException, IOException {
-		throw new ServletException("GET method is not supported!");
+		throw new ServletException("ServletException - GET method is not supported!");
 	}
 
 }
