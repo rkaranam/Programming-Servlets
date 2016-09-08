@@ -35,9 +35,9 @@ public class PreviewGuestDetailsServlet extends HttpServlet {
 		out.println("   <body>");
 		out.println("		<h3>Your details: </h3>");
 		out.println("		<form name='saveGuestDetails' method='post' action='saveGuestDetailsServlet'>");
-		out.println("			<p>Username : " + userName + "</p>");
-		out.println("			<p>Email Id : " + email + "</p>");
-		out.println("			<p>Phone No. : " + phone + "</p>");
+		out.println("			<p>Username : " + (userName == null ? "Not Provided" : userName) + "</p>");
+		out.println("			<p>Email Id : " + (email == null ? "Not Provided" : email) + "</p>");
+		out.println("			<p>Phone No. : " + (phone == null ? "Not Provided" : phone) + "</p>");
 		out.println("			<input type='hidden' name='username' value='" + userName + "' />");
 		out.println("			<input type='hidden' name='email' value='" + email + "' />");
 		out.println("			<input type='hidden' name='phone' value='" + phone + "' />");

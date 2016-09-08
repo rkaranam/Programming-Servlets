@@ -25,6 +25,8 @@ public class GuestDetailsServlet extends HttpServlet {
 		
 		PrintWriter out = response.getWriter();
 		String userName = request.getParameter("username");
+		
+		String urlRewritingQueryString = "username=" + userName;
 
 		out.println("<!DOCTYPE html>");
 		out.println("   <head>");
@@ -39,6 +41,7 @@ public class GuestDetailsServlet extends HttpServlet {
 		out.println("			<p><input type='hidden' name='username' value='" + userName + "'/></p>");
 		out.println("			<p><input type='submit' name='btnSubmit' value='Submit Details' /></p>");
 		out.println("		</form>");
+		out.println("	<p><a href='PreviewGuestDetailsServlet?" + urlRewritingQueryString + "'>Preview Details</a></p>" );
 		out.println("   </body>");
 		out.println("</html>");
 		
