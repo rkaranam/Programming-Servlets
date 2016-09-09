@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Library Books</title>
+</head>
+<body>
+<h3>Java Books Library</h3><hr>
+<h4>Request Books Needed<i>(Choose atleast 5 Books)</i></h4>
+<form name="requestBooks" method="post" action="BooksCookieServlet">
+	<p>User : <input type="text" name="user"/></p>
+	<p>Email : <input type="text" name="email"/></p>
+	<div name="requestBooks">
+		<input type="checkbox" name="requestedBooks" value="hfj"/>Head First Java &nbsp;
+		<input type="checkbox" name="requestedBooks" value="tj"/>Thinking in Java &nbsp;
+		<input type="checkbox" name="requestedBooks" value="ej"/>Effective Java &nbsp;
+		<input type="checkbox" name="requestedBooks" value="htj"/>How To Java &nbsp;
+	</div>
+	<p><input type="submit" name="btnSubmitDetails" value="Request Books"/></p>
+</form>
+</body>
+</html>
