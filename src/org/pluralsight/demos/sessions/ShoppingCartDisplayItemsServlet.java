@@ -10,6 +10,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 @WebServlet("/ShoppingCartDisplayItemsServlet")
 public class ShoppingCartDisplayItemsServlet extends HttpServlet {
@@ -25,6 +26,13 @@ public class ShoppingCartDisplayItemsServlet extends HttpServlet {
 		
 		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
+		
+		HttpSession session = request.getSession();
+		String userName = (String) session.getAttribute("Username");
+		String emailId = (String) session.getAttribute("Email");
+		String phoneNumber = (String) session.getAttribute("Mobile");
+		
+		System.out.println("From ShoppingCartDisplayItemsServlet: Username - " + userName + ", EmailId - " + emailId + ", Mobile - " + phoneNumber);
 		
 		Map<String, Integer> items = new HashMap<>();
 		items.put("Reebok Shoes", 650);
