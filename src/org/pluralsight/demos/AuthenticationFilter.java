@@ -12,7 +12,11 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 
-@WebFilter("/AuthenticationFilter")
+@WebFilter(
+		filterName = "Authenticate",
+		description = "Authenticating SecuredServlet",
+		urlPatterns = {"/SecuredServlet"}
+	)
 public class AuthenticationFilter implements Filter {
 
     public AuthenticationFilter() {
@@ -31,12 +35,22 @@ public class AuthenticationFilter implements Filter {
 		String ipAddress = request.getRemoteAddr();
 		
 		PrintWriter out = response.getWriter();
+		out.println("<!DOCTYPE html>");
+		out.println("   <head>");
+		out.println("       <title></title>");
+		out.println("   </head>");
+		out.println("   <body>");
+		
+		out.println("<h3>Using @WebFilter Annotation: </h3>");
+		
 		if (username.equals("user") && password.equals("password")) {
-			out.println("<p>User logged in " + ipAddress + " at " + new Date().toString() + "</p><hr>");
+			out.println("<p>User logged in " + ipAddress + " at " + new Date().toString() + "</p><hr/>");
 			chain.doFilter(request, response);
 		} else {
 			out.println("<h3>Sorry, You are not authorised to access this resource.</h3>");
 		}
+		
+		out.println("	</body>");
 		
 	}
 
